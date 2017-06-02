@@ -1,4 +1,4 @@
-# Country search engine
+# Country search engine (RWD)
 * HTML
 * CSS
 * AJAX
