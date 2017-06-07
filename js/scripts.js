@@ -3,9 +3,20 @@
 var url = 'https://restcountries.eu/rest/v1/name/',
     countriesList = $('#countries');
 
+function showCountriesList(resp) {
+    countriesList.empty();
+    resp.forEach(function (item) {
+        $('<li>').text(item.name + " (" + item.nativeName + ")" + " - capital city: " + item.capital).appendTo(countriesList);
+    });
+}
+
+function incorrectCountry(resp) {
+    countriesList.empty();
+    $('<p>').text("There is no such country on Earth (or you don't use english country name)").appendTo(countriesList).css("text-align", "center");
+}
+
 function searchCountries() {
     var countryName = $('#country-name').val();
-
 
     $.ajax({
         url: url + countryName,
@@ -20,18 +31,6 @@ function searchCountries() {
             }
         }
     });
-}
-
-function showCountriesList(resp) {
-    countriesList.empty();
-    resp.forEach(function (item) {
-        $('<li>').text(item.name + " (" + item.nativeName + ")" + " - capital city: " + item.capital).appendTo(countriesList);
-    });
-}
-
-function incorrectCountry(resp) {
-    countriesList.empty();
-    $('<p>').text("There is no such country on Earth (or you don't use english country name)").appendTo(countriesList).css("text-align", "center");
 }
 
 $('#search').click(searchCountries);
