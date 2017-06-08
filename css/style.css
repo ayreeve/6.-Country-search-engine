@@ -10,6 +10,8 @@ body {
     background-image: url(../images/background/background_image.jpg);
     background-position: top;
     background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 100%;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -97,7 +99,6 @@ ul {
 
 li {
     font-size: 1.3em;
-    
 }
 
 p {
@@ -151,6 +152,9 @@ p {
 }
 
 @media (max-width: 576px) {
+    body {
+        height: 100vh;
+    }
     .container {
         max-width: 280px;
         max-height: 500px;
