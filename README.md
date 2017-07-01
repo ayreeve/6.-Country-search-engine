@@ -1,4 +1,4 @@
-# Country search engine (RWD)
+# Country search engine
 
 Have you ever wondered what is the capital city of Kyrgyzstan or Djibouti and for some reasons you hate Google? No? Never mind. With this country search engine you can get to know each country capital and native name without Google participation!
 
@@ -6,6 +6,7 @@ How to use:
 1. Type the name of the country in the search filed,
 2. Press green button
 3. You can also type only the first letter or few letters of particular country
+
 Used:
 - HTML
 - CSS
